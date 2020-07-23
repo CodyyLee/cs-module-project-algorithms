@@ -4,14 +4,20 @@ Returns: an integer
 '''
 def single_number(arr):
     # Your code here
-    for i in arr:
-        if arr.count(i) == 1:
-            return i
+    # for i in arr:
+    #     if arr.count(i) == 1:
+    #         return i
+    answer = 0
+    for x in arr:
+        answer ^= x
+    return answer
 
+arr = [1, 1, 4, 4, 5, 5, 3, 3, 9, 0, 0]
+single_number(arr)
 
-
-if __name__ == '__main__':
+# if __name__ == '__main__':
+    
     # Use the main function to test your implementation
-    arr = [1, 1, 4, 4, 5, 5, 3, 3, 9, 0, 0]
+    # arr = [1, 1, 4, 4, 5, 5, 3, 3, 9, 0, 0]
 
-    print(f"The odd-number-out is {single_number(arr)}")
+    # print(f"The odd-number-out is {single_number(arr)}")
